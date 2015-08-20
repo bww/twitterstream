@@ -2,7 +2,7 @@ package twitterstream_test
 
 import (
     "encoding/json"
-    ts "github.com/darkhelmet/twitterstream"
+    ts "github.com/bww/twitterstream"
     . "launchpad.net/gocheck"
     "reflect"
     "testing"

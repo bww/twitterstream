@@ -43,6 +43,7 @@ func NewClientTimeout(consumerKey, consumerSecret, accessToken, accessSecret str
 
 func (c *Client) Track(keywords ...string) (*Connection, error) {
     form := url.Values{"track": {strings.Join(keywords, ",")}}
+    
     req, err := http.NewRequest("POST", FilterUrl, strings.NewReader(form.Encode()))
     if err != nil {
         return nil, fmt.Errorf("twitterstream: Creating track request failed: %s", err)
@@ -70,6 +71,7 @@ func (c *Client) Track(keywords ...string) (*Connection, error) {
 
 func (c *Client) Follow(userIds ...string) (*Connection, error) {
     form := url.Values{"follow": {strings.Join(userIds, ",")}}
+    
     req, err := http.NewRequest("POST", FilterUrl, strings.NewReader(form.Encode()))
     if err != nil {
         return nil, fmt.Errorf("twitterstream: Creating follow request failed: %s", err)

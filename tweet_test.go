@@ -1,7 +1,7 @@
 package twitterstream_test
 
 import (
-    ts "github.com/darkhelmet/twitterstream"
+    ts "github.com/bww/twitterstream"
     . "launchpad.net/gocheck"
 )
 

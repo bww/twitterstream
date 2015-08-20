@@ -1,6 +1,7 @@
 package twitterstream
 
 type User struct {
+    
     // Indicates that the user has an account with "contributor mode" enabled, allowing for Tweets issued by the user to be co-authored by another account. Rarely true.
     ContributorsEnabled bool `json:"contributors_enabled"`
 
@@ -120,4 +121,5 @@ type User struct {
 
     // When present, indicates whether the content being withheld is the "status" or a "user." See New Withheld Content Fields in API Responses.
     WithheldScope string `json:"withheld_scope"`
+    
 }

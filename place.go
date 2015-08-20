@@ -1,6 +1,7 @@
 package twitterstream
 
 type Place struct {
+    
     // Contains a hash of variant information about the place.
     Attributes map[string]interface{} `json:"attributes"`
 

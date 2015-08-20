@@ -44,6 +44,7 @@ func (c *Connection) setup(rc io.ReadCloser) {
 
 func newConnection(timeout time.Duration) *Connection {
     conn := &Connection{timeout: timeout}
+    
     dialer := func(netw, addr string) (net.Conn, error) {
         netc, err := net.DialTimeout(netw, addr, DialTimeout)
         if err != nil {
